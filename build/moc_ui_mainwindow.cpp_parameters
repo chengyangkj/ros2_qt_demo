@@ -1,0 +1,7 @@
+-I/home/chengyangkj/ros_apps/src/ros2_qt_demo/include/ros2_qt_demo
+-I/home/chengyangkj/ros_apps/src/ros2_qt_demo/build
+-I/home/chengyangkj/ros_apps/src/ros2_qt_demo
+-I/home/chengyangkj/ros_apps/src/ros2_qt_demo/build
+-o
+/home/chengyangkj/ros_apps/src/ros2_qt_demo/build/moc_ui_mainwindow.cpp
+/home/chengyangkj/ros_apps/src/ros2_qt_demo/build/ui_mainwindow.h

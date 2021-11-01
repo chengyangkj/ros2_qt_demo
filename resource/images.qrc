@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>images/ros-icon.png</file>
+        <file>images/foxy.jpg</file>
+    </qresource>
+</RCC>
