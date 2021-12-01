@@ -1,8 +1,12 @@
 # ros2_qt_demo
+a demo for ros2 and qt
+test in ros2 foxy
 # how to build
+```shell
 colcon build
+```
 # how to use
-make sure source you workspace and then run in terminal:
+make sure you are sourced your workspace and then run in terminal:
 ```shell
 ros2 run ros2_qt_demo ros2_qt_demo
 ```
