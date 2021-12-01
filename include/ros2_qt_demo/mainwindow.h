@@ -1,10 +1,10 @@
 /*
  * @Author: chengyangkj
  * @Date: 2021-10-30 02:09:08
- * @LastEditTime: 2021-11-28 07:25:25
+ * @LastEditTime: 2021-12-01 06:01:17
  * @LastEditors: chengyangkj
  * @Description: 
- * @FilePath: /ros_app/src/ros2_qt_demo/include/ros2_qt_demo/mainwindow.h
+ * @FilePath: /ros2_qt_demo/include/ros2_qt_demo/mainwindow.h
  * https://github.com/chengyangkj
  */
 #ifndef MAINWINDOW_H
@@ -12,6 +12,7 @@
 
 #include <QMainWindow>
 #include "rclcomm.h"
+#include <iostream>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE

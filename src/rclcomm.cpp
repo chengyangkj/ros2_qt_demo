@@ -1,10 +1,10 @@
 /*
  * @Author: chengyangkj
  * @Date: 2021-10-30 02:08:29
- * @LastEditTime: 2021-11-28 07:22:57
+ * @LastEditTime: 2021-12-01 06:18:27
  * @LastEditors: chengyangkj
  * @Description: ros2的通信类 在这个类进行订阅与发布话题
- * @FilePath: /ros_app/src/ros2_qt_demo/src/rclcomm.cpp
+ * @FilePath: /ros2_qt_demo/src/rclcomm.cpp
  * https://github.com/chengyangkj
  */
 #include "rclcomm.h"
@@ -20,19 +20,19 @@ rclcomm::rclcomm()  {
 }
 void rclcomm::run(){
     //20HZ
-    int i=0;
-    rclcpp::WallRate loop_rate(20);
+    std_msgs::msg::Int32 pub_msg;
+    pub_msg.data=0;
+    rclcpp::WallRate loop_rate(1);
     while (rclcpp::ok())
     {
-        i++;
-        std_msgs::msg::Int32 pub_msg;
-        pub_msg.data=i;
+        pub_msg.data++;
         _publisher->publish(pub_msg);
         rclcpp::spin_some(node);
+        loop_rate.sleep();
     }
     rclcpp::shutdown();
 }
 void rclcomm::recv_callback(const std_msgs::msg::Int32::SharedPtr msg){
-    // RCLCPP_INFO(node->get_logger(), "I heard: '%d'", msg->data);
-    emitTopicData("I head from ros2_qt_demo_publish:"+msg->data);
+    //  RCLCPP_INFO(node->get_logger(), "I heard: '%d'", msg->data);
+    emitTopicData("I head from ros2_qt_demo_publish:"+QString::fromStdString(std::to_string(msg->data)));
 }

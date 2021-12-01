@@ -1,16 +1,17 @@
 /*
  * @Author: chengyangkj
  * @Date: 2021-10-30 02:15:28
- * @LastEditTime: 2021-11-28 07:19:39
+ * @LastEditTime: 2021-12-01 06:03:51
  * @LastEditors: chengyangkj
  * @Description: ros2的通信类 在这个类进行订阅与发布话题
- * @FilePath: /ros_app/src/ros2_qt_demo/include/ros2_qt_demo/rclcomm.h
+ * @FilePath: /ros2_qt_demo/include/ros2_qt_demo/rclcomm.h
  * https://github.com/chengyangkj
  */
 #ifndef RCLCOMM_H
 #define RCLCOMM_H
 #include <QObject>
 #include <QThread>
+#include <iostream>
 #include <rclcpp/rclcpp.hpp>
 #include "std_msgs/msg/int32.hpp"
 class rclcomm:public QThread
